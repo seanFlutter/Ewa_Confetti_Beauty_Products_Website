@@ -105,10 +105,11 @@ List<CarouselItemModel> carouselItems = List.generate(
         ],
       ),
     ),
-    image: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+    image: Container(
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
       child: Image.asset(
-        "assets/images/backdrop${index+1}.jpeg",
-        fit: BoxFit.fitHeight,
+        "assets/images/backdrop${index + 1}.jpeg",
+        // fit: BoxFit.fitHeight,
       ),
     ),
   ),

@@ -33,7 +33,7 @@ class Carousel extends StatelessWidget {
                   builder: (BuildContext context) {
                     return Container(
                       constraints: BoxConstraints(
-                       // minHeight: carouselContainerHeight,
+                        minHeight: carouselContainerHeight,
                       ),
                       child: ScreenHelper(
                         // Responsive views

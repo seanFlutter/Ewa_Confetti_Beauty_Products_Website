@@ -69,6 +69,12 @@ flutter:
       fonts:
         - asset: fonts/karla/Karla-Regular.ttf
           weight: 400
+
+    - family: DancingScript
+      fonts:
+        - asset: fonts/dancing_script/DancingScript-Regular.ttf
+          weight: 400
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
