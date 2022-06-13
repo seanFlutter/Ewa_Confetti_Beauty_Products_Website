@@ -79,7 +79,7 @@ class Home extends StatelessWidget {
               ),
               Container(
 width: double.infinity,
-                color: Colors.red,
+            //    color: Colors.red,
                 //height: MediaQuery.of(context).size.height - 100,
                 child: Carousel(),
               ),

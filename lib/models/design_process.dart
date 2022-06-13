@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class DesignProcess {
   final String title;
   final String imagePath;
-  final String subtitle;
+  final String price;
 
   DesignProcess({
     @required this.title,
     @required this.imagePath,
-    @required this.subtitle,
+    @required this.price,
   });
 }

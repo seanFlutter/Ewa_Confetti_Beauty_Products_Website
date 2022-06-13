@@ -10,25 +10,25 @@ final List<DesignProcess> designProcesses = [
   DesignProcess(
     title: "DESIGN",
     imagePath: "assets/design.png",
-    subtitle:
+    price:
         "A full stack allround designer thay may or may not include a guide for specific creative",
   ),
   DesignProcess(
     title: "DEVELOP",
     imagePath: "assets/develop.png",
-    subtitle:
+    price:
         "A full stack allround developer thay may or may not include a guide for specific creative",
   ),
   DesignProcess(
     title: "WRITE",
     imagePath: "assets/write.png",
-    subtitle:
+    price:
         "A full stack allround writer thay may or may not include a guide for specific creative",
   ),
   DesignProcess(
     title: "PROMOTE",
     imagePath: "assets/promote.png",
-    subtitle:
+    price:
         "A full stack allround promoter thay may or may not include a guide for specific creative",
   ),
 ];
@@ -54,10 +54,22 @@ class TrendingProducts extends StatelessWidget {
       defaultScale: false,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-   Text('Top Picks For You', style: TextStyle(fontFamily: "DancingScript", color: Color(0xffc01157), fontSize: 22)),
+        children: <Widget>[
+          SizedBox(height: 40),
+          Text(
+            'Top Picks For You',
+            style: TextStyle(
+                fontFamily: "DancingScript",
+                color: Color(0xffc01157),
+                fontSize: 22),
+          ),
           SizedBox(
-            height: 50.0,
+            height: 20.0,
+          ),
+          Text(
+            'Trending Products',
+            style: TextStyle(
+                fontFamily: "DancingScript", color: Colors.black, fontSize: 36),
           ),
           Container(
             child: LayoutBuilder(
@@ -108,7 +120,7 @@ class TrendingProducts extends StatelessWidget {
                             height: 15.0,
                           ),
                           Text(
-                            designProcesses[index].subtitle,
+                            designProcesses[index].price,
                             style: TextStyle(
                               color: kCaptionColor,
                               height: 1.5,
