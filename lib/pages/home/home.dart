@@ -78,14 +78,15 @@ class Home extends StatelessWidget {
                 child: Header(),
               ),
               Container(
-
+width: double.infinity,
+                color: Colors.red,
                 //height: MediaQuery.of(context).size.height - 100,
                 child: Carousel(),
               ),
               SizedBox(
                 height: 20.0,
               ),
-              CvSection(),
+              TrendingProducts(),
               IosAppAd(),
               SizedBox(
                 height: 70.0,

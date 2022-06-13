@@ -33,7 +33,7 @@ final List<DesignProcess> designProcesses = [
   ),
 ];
 
-class CvSection extends StatelessWidget {
+class TrendingProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -55,34 +55,7 @@ class CvSection extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "BETTER DESIGN,\nBETTER EXPERIENCES",
-                style: GoogleFonts.oswald(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
-                  height: 1.8,
-                  fontSize: 18.0,
-                ),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  child: Text(
-                    "DOWNLOAD CV",
-                    style: GoogleFonts.oswald(
-                      color: kPrimaryColor,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 16.0,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+   Text('Top Picks For You', style: TextStyle(fontFamily: "DancingScript", color: Color(0xffc01157), fontSize: 22)),
           SizedBox(
             height: 50.0,
           ),

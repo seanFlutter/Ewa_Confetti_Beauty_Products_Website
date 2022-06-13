@@ -74,6 +74,10 @@ flutter:
       fonts:
         - asset: fonts/dancing_script/DancingScript-Regular.ttf
           weight: 400
+    - family: Rosarivo
+      fonts:
+        - asset: fonts/rosarivo/Rosarivo-Italic.ttf
+          weight: 400
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
