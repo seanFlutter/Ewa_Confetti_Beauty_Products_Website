@@ -17,7 +17,8 @@ import 'package:web_portfolio/utils/globals.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white,
+    return Scaffold(
+      backgroundColor: Colors.white,
       key: Globals.scaffoldKey,
       endDrawer: Drawer(
         child: SafeArea(
@@ -44,7 +45,6 @@ class Home extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14.0,
-
                               ),
                             ),
                           ),
@@ -77,14 +77,16 @@ class Home extends StatelessWidget {
               Container(
                 child: Header(),
               ),
-              Carousel(),
+              Container(
+
+                //height: MediaQuery.of(context).size.height - 100,
+                child: Carousel(),
+              ),
               SizedBox(
                 height: 20.0,
               ),
               CvSection(),
               IosAppAd(),
-              
-              
               SizedBox(
                 height: 70.0,
               ),

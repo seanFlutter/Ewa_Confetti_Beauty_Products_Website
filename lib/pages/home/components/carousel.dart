@@ -11,55 +11,46 @@ class Carousel extends StatelessWidget {
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *
         (ScreenHelper.isMobile(context) ? .7 : .85);
-    return Container(
-     // height: carouselContainerHeight,
-      width: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            alignment: Alignment.center,
-            child: CarouselSlider(
-              carouselController: carouselController,
-              options: CarouselOptions(
-                 autoPlay: true,
-                viewportFraction: 1,
-                scrollPhysics: NeverScrollableScrollPhysics(),
-                height: carouselContainerHeight,
-              ),
-              items: List.generate(
-                carouselItems.length,
-                (index) => Builder(
-                  builder: (BuildContext context) {
-                    return Container(
-                      constraints: BoxConstraints(
-                        minHeight: carouselContainerHeight,
-                      ),
-                      child: ScreenHelper(
-                        // Responsive views
-                        desktop: _buildDesktop(
-                          context,
-                          carouselItems[index].text,
-                          carouselItems[index].image,
-                        ),
-                        tablet: _buildTablet(
-                          context,
-                          carouselItems[index].text,
-                          carouselItems[index].image,
-                        ),
-                        mobile: _buildMobile(
-                          context,
-                          carouselItems[index].text,
-                          carouselItems[index].image,
-                        ),
-                      ),
-                    );
-                  },
+    return Container(width: double.infinity,
+      alignment: Alignment.center,
+      child: CarouselSlider(
+        carouselController: carouselController,
+        options: CarouselOptions(
+           autoPlay: true,
+          viewportFraction: 1,
+          scrollPhysics: NeverScrollableScrollPhysics(),
+          //height: carouselContainerHeight,
+        ),
+        items: List.generate(
+          carouselItems.length,
+          (index) => Builder(
+            builder: (BuildContext context) {
+              return Container(
+                constraints: BoxConstraints(
+                 // minHeight: carouselContainerHeight,
                 ),
-              ).toList(),
-            ),
-          )
-        ],
+                child: ScreenHelper(
+                  // Responsive views
+                  desktop: _buildDesktop(
+                    context,
+                    carouselItems[index].text,
+                    carouselItems[index].image,
+                  ),
+                  tablet: _buildTablet(
+                    context,
+                    carouselItems[index].text,
+                    carouselItems[index].image,
+                  ),
+                  mobile: _buildMobile(
+                    context,
+                    carouselItems[index].text,
+                    carouselItems[index].image,
+                  ),
+                ),
+              );
+            },
+          ),
+        ).toList(),
       ),
     );
   }
