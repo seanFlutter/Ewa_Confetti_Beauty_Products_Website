@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:web_portfolio/pages/home/components/carousel.dart';
-import 'package:web_portfolio/pages/home/components/cv_section.dart';
+import 'package:web_portfolio/pages/home/components/home_slider_display.dart';
+import 'package:web_portfolio/pages/home/components/trending.dart';
 import 'package:web_portfolio/pages/home/components/education_section.dart';
 import 'package:web_portfolio/pages/home/components/footer.dart';
 import 'package:web_portfolio/pages/home/components/header.dart';
@@ -73,7 +73,7 @@ class Home extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               Container(
                 child: Header(),
               ),
@@ -81,7 +81,7 @@ class Home extends StatelessWidget {
 width: double.infinity,
             //    color: Colors.red,
                 //height: MediaQuery.of(context).size.height - 100,
-                child: Carousel(),
+                child: HomeSliderDisplay(),
               ),
               SizedBox(
                 height: 20.0,
