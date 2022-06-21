@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/home_slider_display.dart';
-import 'package:web_portfolio/pages/screens/home/widgets/trending.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/trending_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/education_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/footer.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/header.dart';
@@ -86,7 +86,7 @@ class Home extends StatelessWidget {
               SizedBox(
                 height: 20.0,
               ),
-              //   TrendingProducts(),
+                TrendingProductsSection(),
               IosAppAd(),
               SizedBox(
                 height: 70.0,

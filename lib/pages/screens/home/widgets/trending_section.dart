@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/design_process.dart';
+import 'package:web_portfolio/models/product_model.dart';
 import 'package:web_portfolio/pages/base/product_widget.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/home_slider_display.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
-
-
 
 class TrendingProductsSection extends StatelessWidget {
   final List<ProductModel> productList = [
@@ -73,10 +71,19 @@ class TrendingProductsSection extends StatelessWidget {
           ),
           Container(
             child: CarouselSlider(
-              options: CarouselOptions(height: 400),
+              options: CarouselOptions(
+                enlargeCenterPage: true,
+                autoPlay: true,
+                viewportFraction: 0.3,
+                scrollPhysics: NeverScrollableScrollPhysics(),
+                //   enableInfiniteScroll: true,
+                //autoPlayCurve: Curves.fastOutSlowIn,
+                scrollDirection: Axis.horizontal,
+                //height: carouselContainerHeight,
+              ),
               items: productList
                   .map(
-                    ((product) => ProductWidget()),
+                    ((product) => ProductWidget(productModel: product)),
                   )
                   .toList(),
             ),
@@ -151,5 +158,3 @@ class TrendingProductsSection extends StatelessWidget {
     );
   }
 }
-
-
