@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/carousel_item_model.dart';
-import 'package:web_portfolio/pages/home/components/carousel_items.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/carousel_items.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 class HomeSliderDisplay extends StatelessWidget {
   final CarouselController carouselController = CarouselController();
 
-  List<CarouselItemModel> homeDisplayImages = List.generate(
+  List<HomeDisplayModel> homeDisplayImages = List.generate(
     2,
         (index) =>
-        CarouselItemModel(
+        HomeDisplayModel(
       text: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

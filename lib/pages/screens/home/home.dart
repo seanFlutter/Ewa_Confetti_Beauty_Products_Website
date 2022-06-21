@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:web_portfolio/pages/home/components/home_slider_display.dart';
-import 'package:web_portfolio/pages/home/components/trending.dart';
-import 'package:web_portfolio/pages/home/components/education_section.dart';
-import 'package:web_portfolio/pages/home/components/footer.dart';
-import 'package:web_portfolio/pages/home/components/header.dart';
-import 'package:web_portfolio/pages/home/components/ios_app_ad.dart';
-import 'package:web_portfolio/pages/home/components/portfolio_stats.dart';
-import 'package:web_portfolio/pages/home/components/skill_section.dart';
-import 'package:web_portfolio/pages/home/components/sponsors.dart';
-import 'package:web_portfolio/pages/home/components/testimonial_widget.dart';
-import 'package:web_portfolio/pages/home/components/website_ad.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/home_slider_display.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/trending.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/education_section.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/footer.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/header.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/ios_app_ad.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/portfolio_stats.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/skill_section.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/sponsors.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/testimonial_widget.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/website_ad.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/globals.dart';
 
@@ -78,15 +78,15 @@ class Home extends StatelessWidget {
                 child: Header(),
               ),
               Container(
-width: double.infinity,
-            //    color: Colors.red,
+                width: double.infinity,
+                //    color: Colors.red,
                 //height: MediaQuery.of(context).size.height - 100,
                 child: HomeSliderDisplay(),
               ),
               SizedBox(
                 height: 20.0,
               ),
-              TrendingProducts(),
+              //   TrendingProducts(),
               IosAppAd(),
               SizedBox(
                 height: 70.0,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CarouselItemModel {
+class HomeDisplayModel {
   final Widget text;
   final Widget image;
 
-  CarouselItemModel({
+  HomeDisplayModel({
     @required this.text,
     @required this.image,
   });

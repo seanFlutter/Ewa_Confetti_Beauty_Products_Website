@@ -4,34 +4,36 @@ import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/design_process.dart';
-import 'package:web_portfolio/pages/home/components/home_slider_display.dart';
+import 'package:web_portfolio/pages/base/product_widget.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/home_slider_display.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
-final List<ProductModel> productList = [
-  ProductModel(
-    description: "Goodnight glow Retin-ALT sleeping creme",
-    imagePath: "assets/images/product1.png",
-    price: "119,000",
-  ),
-  ProductModel(
-    description: "Has A Gun “Vanilla vibes” EDP 100ml For Wome",
-    imagePath: "assets/images/product2.png",
-    price: "84,000",
-  ),
-  ProductModel(
-    description: "Ewa confetti blemish control face lave",
-    imagePath: "assets/images/product3.png",
-    price: "73,000",
-  ),
-  ProductModel(
-    description: "Good Molecules Niacinamide Brightening Toner",
-    imagePath: "assets/images/product4.png",
-    price: "50,000",
-  ),
-];
 
-class TrendingProducts extends StatelessWidget {
+
+class TrendingProductsSection extends StatelessWidget {
+  final List<ProductModel> productList = [
+    ProductModel(
+      description: "Goodnight glow Retin-ALT sleeping creme",
+      imagePath: "assets/images/product1.png",
+      price: "119,000",
+    ),
+    ProductModel(
+      description: "Has A Gun “Vanilla vibes” EDP 100ml For Wome",
+      imagePath: "assets/images/product2.png",
+      price: "84,000",
+    ),
+    ProductModel(
+      description: "Ewa confetti blemish control face lave",
+      imagePath: "assets/images/product3.png",
+      price: "73,000",
+    ),
+    ProductModel(
+      description: "Good Molecules Niacinamide Brightening Toner",
+      imagePath: "assets/images/product4.png",
+      price: "50,000",
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -150,11 +152,4 @@ class TrendingProducts extends StatelessWidget {
   }
 }
 
-class ProductWidget extends StatelessWidget {
-  const ProductWidget({Key key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
