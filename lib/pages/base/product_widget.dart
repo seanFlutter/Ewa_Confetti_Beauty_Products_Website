@@ -6,13 +6,17 @@ class ProductWidget extends StatelessWidget {
   final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
-    return Container(height: 600,
-      child: Column(
-        children: [
+    return Container(
+     // color: Colors.green,
+      //height: 600,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+        children:<Widget> [
           Stack(
-            children: <Widget>[Image.asset('${productModel.imagePath}', fit: BoxFit.contain,)],
+            children: <Widget>[
+              Image.asset('${productModel.imagePath}', fit: BoxFit.cover)
+            ],
           ),
-          Text('${productModel.description}'),
+          Text('${productModel.description}', overflow: TextOverflow.ellipsis,),
           Text('${productModel.price}')
         ],
       ),

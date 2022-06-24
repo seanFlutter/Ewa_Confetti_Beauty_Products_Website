@@ -87,7 +87,7 @@ class Home extends StatelessWidget {
                 height: 20.0,
               ),
                 TrendingProductsSection(),
-              IosAppAd(),
+              AboutUsSection(),
               SizedBox(
                 height: 70.0,
               ),

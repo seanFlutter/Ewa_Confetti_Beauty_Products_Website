@@ -5,7 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
-class IosAppAd extends StatelessWidget {
+class AboutUsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -80,7 +80,7 @@ class TrendingProductsSection extends StatelessWidget {
                 //autoPlayCurve: Curves.fastOutSlowIn,
                 scrollDirection: Axis.horizontal,
                 //height: carouselContainerHeight,
-              ),
+              ),,
               items: productList
                   .map(
                     ((product) => ProductWidget(productModel: product)),
