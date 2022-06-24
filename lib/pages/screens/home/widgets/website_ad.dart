@@ -6,7 +6,7 @@ import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 class WebsiteAd extends StatelessWidget {
-  // We can use same idea as ios_app_ad.dart and swap children order, let's copy code
+  // We can use same idea as about_us_section.dart and swap children order, let's copy code
   @override
   Widget build(BuildContext context) {
     return Container(

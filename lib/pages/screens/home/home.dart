@@ -5,7 +5,7 @@ import 'package:web_portfolio/pages/screens/home/widgets/trending_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/education_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/footer.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/header.dart';
-import 'package:web_portfolio/pages/screens/home/widgets/ios_app_ad.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/about_us_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/portfolio_stats.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/skill_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/sponsors.dart';

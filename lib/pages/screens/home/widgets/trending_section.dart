@@ -7,6 +7,7 @@ import 'package:web_portfolio/models/product_model.dart';
 import 'package:web_portfolio/pages/base/product_widget.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/home_slider_display.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/utils/font_styles.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 class TrendingProductsSection extends StatelessWidget {
@@ -56,10 +57,7 @@ class TrendingProductsSection extends StatelessWidget {
           SizedBox(height: 40),
           Text(
             'Top Picks For You',
-            style: TextStyle(
-                fontFamily: "DancingScript",
-                color: Color(0xffc01157),
-                fontSize: 22),
+            style: dancingScriptRegular22,
           ),
           SizedBox(
             height: 20.0,
@@ -80,7 +78,7 @@ class TrendingProductsSection extends StatelessWidget {
                 //autoPlayCurve: Curves.fastOutSlowIn,
                 scrollDirection: Axis.horizontal,
                 //height: carouselContainerHeight,
-              ),,
+              ),
               items: productList
                   .map(
                     ((product) => ProductWidget(productModel: product)),

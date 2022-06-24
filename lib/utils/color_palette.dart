@@ -5,6 +5,10 @@ class Palette {
   Palette._();
   static const Color transparent = Colors.transparent;
 
+  static const Color pink = Color(0xffc01157);
+
+
+
   static const Color lightBlue_1 = Color(0XFFdde6ff);
   static const Color lightBlue_2 = Color(0XFF2050d6);
   static const Color lightBlue_3 = Color(0xff4860AA);
