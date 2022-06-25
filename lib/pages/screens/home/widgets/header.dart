@@ -93,7 +93,7 @@ class HeaderRow extends StatelessWidget {
 class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container(color: Colors.white,
       child: ScreenHelper(
         desktop: Padding(
           padding: EdgeInsets.symmetric(vertical: 8.0),

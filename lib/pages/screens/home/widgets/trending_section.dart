@@ -10,32 +10,60 @@ import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/font_styles.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
+final List<ProductModel> productList = [
+  ProductModel(
+    description: "Goodnight glow Retin-ALT sleeping creme",
+    imagePath: "assets/images/product1.png",
+    price: "119,000",
+  ),
+  ProductModel(
+    description: "Has A Gun “Vanilla vibes” EDP 100ml For Wome",
+    imagePath: "assets/images/product2.png",
+    price: "84,000",
+  ),
+  ProductModel(
+    description: "Ewa confetti blemish control face lave",
+    imagePath: "assets/images/product3.png",
+    price: "73,000",
+  ),
+  ProductModel(
+    description: "Good Molecules Niacinamide Brightening Toner",
+    imagePath: "assets/images/product4.png",
+    price: "50,000",
+  ),
+  ProductModel(
+    description: "Night touch, shadow monkey ",
+    imagePath: "assets/images/product5.png",
+    price: "250,000",
+  ),
+  ProductModel(
+    description: "Beauty Overdose",
+    imagePath: "assets/images/product6.png",
+    price: "187,500",
+  ),  ProductModel(
+    description: "Marlians Forever",
+    imagePath: "assets/images/product7.png",
+    price: "187,500",
+  ),  ProductModel(
+    description: "Raving Stylish",
+    imagePath: "assets/images/product8.png",
+    price: "13,500",
+  ),  ProductModel(
+    description: "Super Cute Midnight Vibes",
+    imagePath: "assets/images/product9.png",
+    price: "187,500",
+  ),  ProductModel(
+    description: "Sexy Smashing Kill Them All",
+    imagePath: "assets/images/product10.png",
+    price: "87,500",
+  ),
+];
+
 class TrendingProductsSection extends StatelessWidget {
-  final List<ProductModel> productList = [
-    ProductModel(
-      description: "Goodnight glow Retin-ALT sleeping creme",
-      imagePath: "assets/images/product1.png",
-      price: "119,000",
-    ),
-    ProductModel(
-      description: "Has A Gun “Vanilla vibes” EDP 100ml For Wome",
-      imagePath: "assets/images/product2.png",
-      price: "84,000",
-    ),
-    ProductModel(
-      description: "Ewa confetti blemish control face lave",
-      imagePath: "assets/images/product3.png",
-      price: "73,000",
-    ),
-    ProductModel(
-      description: "Good Molecules Niacinamide Brightening Toner",
-      imagePath: "assets/images/product4.png",
-      price: "50,000",
-    ),
-  ];
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       width: double.infinity,
       child: ScreenHelper(
         desktop: _buildUi(context, kDesktopMaxWidth),
@@ -68,11 +96,15 @@ class TrendingProductsSection extends StatelessWidget {
                 fontFamily: "DancingScript", color: Colors.black, fontSize: 36),
           ),
           Container(
+            // color: Colors.red,
+            margin: EdgeInsets.only(top: 15),
             child: CarouselSlider(
               options: CarouselOptions(
-                enlargeCenterPage: true,
+                disableCenter: true,
+                height: 400,
+                // enlargeCenterPage: true,
                 autoPlay: true,
-                viewportFraction: 0.3,
+                viewportFraction: ScreenHelper.isDesktop(context) ? 0.2 : 0.3,
                 scrollPhysics: NeverScrollableScrollPhysics(),
                 //   enableInfiniteScroll: true,
                 //autoPlayCurve: Curves.fastOutSlowIn,
@@ -86,71 +118,6 @@ class TrendingProductsSection extends StatelessWidget {
                   .toList(),
             ),
           ),
-          // Container(
-          //   child: LayoutBuilder(
-          //     builder: (_context, constraints) {
-          //       return ResponsiveGridView.builder(
-          //         padding: EdgeInsets.all(0.0),
-          //         shrinkWrap: true,
-          //         physics: NeverScrollableScrollPhysics(),
-          //         alignment: Alignment.topCenter,
-          //         gridDelegate: ResponsiveGridDelegate(
-          //           mainAxisSpacing: 20.0,
-          //           crossAxisSpacing: 20.0,
-          //           maxCrossAxisExtent: ScreenHelper.isTablet(context) ||
-          //                   ScreenHelper.isMobile(context)
-          //               ? constraints.maxWidth / 2.0
-          //               : 250.0,
-          //           // Hack to adjust child height
-          //           childAspectRatio: ScreenHelper.isDesktop(context)
-          //               ? 1
-          //               : MediaQuery.of(context).size.aspectRatio * 1.5,
-          //         ),
-          //         itemBuilder: (BuildContext context, int index) {
-          //           return Container(
-          //             child: Column(
-          //               crossAxisAlignment: CrossAxisAlignment.start,
-          //               children: [
-          //                 Row(
-          //                   mainAxisAlignment: MainAxisAlignment.start,
-          //                   children: [
-          //                     Image.asset(
-          //                       productList[index].imagePath,
-          //                       width: 40.0,
-          //                     ),
-          //                     SizedBox(
-          //                       width: 15.0,
-          //                     ),
-          //                     Text(
-          //                       productList[index].description,
-          //                       style: GoogleFonts.oswald(
-          //                         fontSize: 20.0,
-          //                         fontWeight: FontWeight.w700,
-          //                         color: Colors.white,
-          //                       ),
-          //                     )
-          //                   ],
-          //                 ),
-          //                 SizedBox(
-          //                   height: 15.0,
-          //                 ),
-          //                 Text(
-          //                   productList[index].price,
-          //                   style: TextStyle(
-          //                     color: kCaptionColor,
-          //                     height: 1.5,
-          //                     fontSize: 14.0,
-          //                   ),
-          //                 )
-          //               ],
-          //             ),
-          //           );
-          //         },
-          //         itemCount: productList.length,
-          //       );
-          //     },
-          //   ),
-          // )
         ],
       ),
     );

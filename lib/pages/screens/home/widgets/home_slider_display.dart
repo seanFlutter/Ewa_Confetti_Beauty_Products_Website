@@ -126,7 +126,7 @@ class HomeSliderDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *
         (ScreenHelper.isMobile(context) ? .7 : .85);
-    return Container(width: double.infinity,
+    return Container(width: double.infinity,color: Colors.white,
       alignment: Alignment.center,
       child: CarouselSlider(
         carouselController: carouselController,

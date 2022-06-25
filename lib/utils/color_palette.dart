@@ -6,6 +6,7 @@ class Palette {
   static const Color transparent = Colors.transparent;
 
   static const Color pink = Color(0xffc01157);
+  static const Color pinkAlternate = Color(0xffa53692);
 
 
 

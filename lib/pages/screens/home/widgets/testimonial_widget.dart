@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/testimonial.dart';
+import 'package:web_portfolio/models/testimonial_model.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 final List<Testimonial> testimonials = [
   Testimonial(
-    text:
+    message:
         "This is a testimonial text from Janny Stone. Michele is a professional at what he does and never ceases to amaze me with his beautiful works. I will like to work with him in the future again.",
     occupation: "Product Designer",
     personName: "JANNY STONE",
     profilePhoto: "assets/female.png",
   ),
   Testimonial(
-    text:
+    message:
         "This is a testimonial text from Ken Williams. Michele is a professional at what he does and never ceases to amaze me with his beautiful works. I will like to work with him in the future again.",
     occupation: "Art Director",
     personName: "KEN WILLIAMS",
@@ -110,7 +110,7 @@ Widget _buildUi(double width) {
                             height: 15.0,
                           ),
                           Text(
-                            testimonial.text,
+                            testimonial.message,
                             style: TextStyle(
                               color: kCaptionColor,
                               height: 1.8,

@@ -11,6 +11,7 @@ class AboutUsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       child: ScreenHelper(
         desktop: _buildUi(kDesktopMaxWidth),
         tablet: _buildUi(kTabletMaxWidth),
@@ -32,97 +33,102 @@ class AboutUsSection extends StatelessWidget {
                 direction: constraints.maxWidth > 720
                     ? Axis.horizontal
                     : Axis.vertical,
-                children: <Widget>[                 Expanded(
-                  flex: constraints.maxWidth > 720.0 ? 1 : 0,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        "Coming through with all your beauty pleasures..",
-                        style: dancingScriptRegular22,
-                      ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
-                      Text(
-                        "We Breathe Beauty",
-                        style: rosarivo48,
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text(
-                        "Ewa Confetti is an online retail store providing the world’s best beauty products. From skin care to make up, each of the beauty products is chosen for its efficacy and stand-alone brilliance.  for makeup artists, makeup lovers, beauty bloggers and SKINCARE products for both men and women across the world.",
-                        style: karlaRegular15,
-                      ),
-                      SizedBox(
-                        height: 25.0,
-                      ),
-                      Row(
-                        children: [
-                          MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Palette.pink,
-                              //  borderRadius: BorderRadius.circular(5.0),
-                              ),
-                              height: 48.0,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 28.0,
-                              ),
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Center(
-                                  child: Text(
-                                    "SHOP NOW",
-                                    style: karlaRegular13,
+                children: <Widget>[
+                  Expanded(
+                    flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          "Coming through with all your beauty pleasures..",
+                          style: dancingScriptRegular22,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Text(
+                          "We Breathe Beauty",
+                          style: rosarivo48,
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          "Ewa Confetti is an online retail store providing the world’s best beauty products. From skin care to make up, each of the beauty products is chosen for its efficacy and stand-alone brilliance.  for makeup artists, makeup lovers, beauty bloggers and SKINCARE products for both men and women across the world.",
+                          style: karla15.copyWith(color: Color(0xff777777), ),
+                        ),
+                        SizedBox(
+                          height: 25.0,
+                        ),
+                        Row(
+                          children: [
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Palette.pink,
+                                  //  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                height: 48.0,
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 28.0,
+                                ),
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Center(
+                                    child: Text(
+                                      "SHOP NOW",
+                                      style: karlaRegular13.copyWith(
+                                          color: Colors.white),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: Container(
-                              decoration: BoxDecoration(
-                               // borderRadius: BorderRadius.circular(5.0),
-                                border: Border.all(
-                                  color: kPrimaryColor,
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  // borderRadius: BorderRadius.circular(5.0),
+                                  border: Border.all(
+                                    color: Color(0xff777777),
+                                  ),
                                 ),
-                              ),
-                              height: 48.0,
-                              padding: EdgeInsets.symmetric(horizontal: 28.0),
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Center(
-                                  child: Text(
-                                    "ABOUT US",
-                                    style: karlaRegular13,
+                                height: 48.0,
+                                padding: EdgeInsets.symmetric(horizontal: 28.0),
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Center(
+                                    child: Text(
+                                      "ABOUT US",
+                                      style: karlaRegular13.copyWith(
+                                          color: Colors.black),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          )
-                        ],
-                      )
-                    ],
+                            )
+                          ],
+                        ),
+                        SizedBox(height: 30),
+                      ],
+                    ),
                   ),
-                ),
                   // Disable expanded on smaller screen to avoid Render errors by setting flex to 0
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
-                    child: Image.asset(
-                      "assets/images/product3.png",
-                      // Set width for image on smaller screen
-                      width: constraints.maxWidth > 720.0 ? null : 350.0,
+                    child: Container(padding: EdgeInsets.only(bottom  : 10),
+                      child: Image.asset(
+                        "assets/images/product3.png",
+                        // Set width for image on smaller screen
+                        width: constraints.maxWidth > 720.0 ? null : 350.0,
+                      ),
                     ),
                   ),
-
                 ],
               ),
             ),
