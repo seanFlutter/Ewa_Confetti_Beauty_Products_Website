@@ -11,7 +11,7 @@ import 'package:web_portfolio/pages/screens/home/widgets/about_us_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/portfolio_stats.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/skill_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/sponsors.dart';
-import 'package:web_portfolio/pages/screens/home/widgets/testimonial_widget.dart';
+
 import 'package:web_portfolio/pages/screens/home/widgets/new_arrivals_section.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/font_styles.dart';
@@ -45,7 +45,7 @@ class Home extends StatelessWidget {
                           child: TextButton(
                             onPressed: headerItems[index].onTap,
                             child: Text(
-                              headerItems[index].title,
+                              headerItems[index].title!,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14.0,
@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                       )
                     : ListTile(
                         title: Text(
-                          headerItems[index].title,
+                          headerItems[index].title!,
                           style: TextStyle(
                             color: Colors.white,
                           ),
@@ -89,7 +89,7 @@ class Home extends StatelessWidget {
               TransparentDivider(),
 
               NewArrivalsSection(),
-              TrendingProductsSection(),
+              TestimonialSection(),
 
               SkillSection(),
               SizedBox(
@@ -99,7 +99,7 @@ class Home extends StatelessWidget {
               SizedBox(
                 height: 50.0,
               ),
-              TestimonialWidget(),
+
               Footer(),
             ],
           ),

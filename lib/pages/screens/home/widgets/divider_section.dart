@@ -4,7 +4,7 @@ import 'package:web_portfolio/utils/screen_helper.dart';
 
 class TransparentDivider extends StatelessWidget {
   const TransparentDivider({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

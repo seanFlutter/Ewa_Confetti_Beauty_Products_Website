@@ -99,12 +99,12 @@ class SkillSection extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     Expanded(
-                                      flex: skill.percentage,
+                                      flex: skill.percentage!,
                                       child: Container(
                                         padding: EdgeInsets.only(left: 10.0),
                                         alignment: Alignment.centerLeft,
                                         height: 38.0,
-                                        child: Text(skill.skill),
+                                        child: Text(skill.skill!),
                                         color: Colors.white,
                                       ),
                                     ),
@@ -113,7 +113,7 @@ class SkillSection extends StatelessWidget {
                                     ),
                                     Expanded(
                                       // remaining (blank part)
-                                      flex: 100 - skill.percentage,
+                                      flex: 100 - skill.percentage!,
                                       child: Divider(
                                         color: Colors.white,
                                       ),

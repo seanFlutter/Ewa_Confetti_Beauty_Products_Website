@@ -4,8 +4,8 @@ import 'package:web_portfolio/utils/color_palette.dart';
 import 'package:web_portfolio/utils/font_styles.dart';
 
 class ProductWidget extends StatelessWidget {
-  const ProductWidget({this.productModel, Key key}) : super(key: key);
-  final ProductModel productModel;
+  const ProductWidget({this.productModel, Key? key}) : super(key: key);
+  final ProductModel? productModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,17 +22,17 @@ class ProductWidget extends StatelessWidget {
               ),
               child: AspectRatio(
                 aspectRatio: 1,
-                child:       Image.asset('${productModel.imagePath}',
+                child:       Image.asset('${productModel!.imagePath}',
                     fit: BoxFit.cover),
               ),
             ),
           ),
           Text(
-            '${productModel.description}',
+            '${productModel!.description}',
             overflow: TextOverflow.ellipsis, softWrap: true,  style: rosarivo14.copyWith(color: Palette.pinkAlternate),
           ),
           Text(
-            'N${productModel.price}',
+            'N${productModel!.price}',
          style: karla15,
           ),
         ],

@@ -77,14 +77,14 @@ Widget _buildUi(double width, BuildContext context) {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Image.asset(
-                                      footerItem.iconPath,
+                                      footerItem.iconPath!,
                                       width: 25.0,
                                     ),
                                     SizedBox(
                                       width: 15.0,
                                     ),
                                     Text(
-                                      footerItem.title,
+                                      footerItem.title!,
                                       style: GoogleFonts.oswald(
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.w700,

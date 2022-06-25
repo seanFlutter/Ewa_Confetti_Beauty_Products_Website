@@ -145,17 +145,17 @@ class HomeSliderDisplay extends StatelessWidget {
                 desktop: _buildDesktop(
                   context,
 
-                  homeDisplayImages[index].image,
+                  homeDisplayImages[index].image!,
                 ),
                 tablet: _buildTablet(
                   context,
 
-                  homeDisplayImages[index].image,
+                  homeDisplayImages[index].image!,
                 ),
                 mobile: _buildMobile(
                   context,
 
-                  homeDisplayImages[index].image,
+                  homeDisplayImages[index].image!,
                 ),
               );
             },

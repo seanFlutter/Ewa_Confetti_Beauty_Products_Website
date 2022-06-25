@@ -47,7 +47,7 @@ class PortfolioStats extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        stat.count,
+                        stat.count!,
                         style: GoogleFonts.oswald(
                           fontWeight: FontWeight.w700,
                           fontSize: 32.0,
@@ -58,7 +58,7 @@ class PortfolioStats extends StatelessWidget {
                         width: 10.0,
                       ),
                       Text(
-                        stat.text,
+                        stat.text!,
                         style: TextStyle(
                           fontSize: 16.0,
                           color: kCaptionColor,

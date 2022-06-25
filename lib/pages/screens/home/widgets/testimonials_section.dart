@@ -32,13 +32,12 @@ final List<Testimonial> testimonialList = [
       profilePhoto: ''),
 ];
 
-class TrendingProductsSection extends StatefulWidget {
+class TestimonialSection extends StatefulWidget {
   @override
-  State<TrendingProductsSection> createState() =>
-      _TrendingProductsSectionState();
+  State<TestimonialSection> createState() => _TrendingProductsSectionState();
 }
 
-class _TrendingProductsSectionState extends State<TrendingProductsSection>
+class _TrendingProductsSectionState extends State<TestimonialSection>
     with TickerProviderStateMixin {
   // Create a controller
   late final AnimationController animationController = AnimationController(
@@ -87,16 +86,23 @@ class _TrendingProductsSectionState extends State<TrendingProductsSection>
             style: TextStyle(
                 fontFamily: "DancingScript", color: Colors.black, fontSize: 36),
           ),
+          SizedBox(height: 10),
+          RotationTransition(
+            turns: animation,
+            child: Image.asset(
+              'assets/images/logo.png',
+              height: 100,
+            ),
+          ),
           Container(
             // color: Colors.red,
             margin: EdgeInsets.only(top: 15),
             child: CarouselSlider(
               options: CarouselOptions(
-                disableCenter: true,
                 height: 300,
                 // enlargeCenterPage: true,
                 autoPlay: true,
-                viewportFraction: ScreenHelper.isDesktop(context) ? 0.2 : 0.3,
+                viewportFraction: 1,
                 scrollPhysics: NeverScrollableScrollPhysics(),
                 //   enableInfiniteScroll: true,
                 //autoPlayCurve: Curves.fastOutSlowIn,
@@ -105,9 +111,15 @@ class _TrendingProductsSectionState extends State<TrendingProductsSection>
               ),
               items: testimonialList
                   .map(
-                    ((product) => Column(
+                    ((testimonial) => Column(
                           children: <Widget>[
-                            RotationTransition(turns: animation, child: Image.asset('assets/images/logo.png'),)
+                            Text('${testimonial.message}', style: karla14),
+                        Align(alignment: Alignment.bottomLeft,
+                              child: Text(
+                                '${testimonial.personName} - Happy Customer',
+                                style: karla14,
+                              ),
+                            )
                           ],
                         )),
                   )
