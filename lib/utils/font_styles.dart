@@ -5,7 +5,8 @@ import 'package:web_portfolio/utils/dimensions.dart';
 ///Karla
 final karlaRegular13 = TextStyle(fontFamily: "Karla", fontSize: 13);
 final karla14 =
-    TextStyle(fontFamily: "Karla", fontSize: Dimensions.fontSizeDefault);
+    TextStyle(fontFamily: "Karla", fontSize: Dimensions.fontSizeDefault);final karla14grey =
+    TextStyle(fontFamily: "Karla", fontSize: Dimensions.fontSizeDefault,color: Palette.grey);
 final karla15 = TextStyle(fontFamily: "Karla", fontSize: 15);
 
 final dancingScriptRegular22 = TextStyle(

@@ -71,7 +71,7 @@ class _TrendingProductsSectionState extends State<TestimonialSection>
       minWidth: width,
       defaultScale: false,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           SizedBox(height: 40),
           Text(
@@ -113,12 +113,17 @@ class _TrendingProductsSectionState extends State<TestimonialSection>
                   .map(
                     ((testimonial) => Column(
                           children: <Widget>[
-                            Text('${testimonial.message}', style: karla14),
-                        Align(alignment: Alignment.bottomLeft,
-                              child: Text(
-                                '${testimonial.personName} - Happy Customer',
-                                style: karla14,
-                              ),
+                            Text('${testimonial.message}', style: karla14grey),
+                        SizedBox(height: 20),
+                        RichText(
+                        text: TextSpan(
+                          text: '${testimonial.personName} ',
+                          style: karla14,
+                          children:  <TextSpan>[
+                            TextSpan(text: '- Happy Client ', style: karla14grey),
+
+                          ],
+                        ),
                             )
                           ],
                         )),

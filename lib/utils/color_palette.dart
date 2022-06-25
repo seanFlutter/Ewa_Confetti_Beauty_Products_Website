@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 
 class Palette {
   Palette._();
-  static const Color transparent = Colors.transparent;
+
+  static const Color grey = Color(0xff777777);
 
   static const Color pink = Color(0xffc01157);
   static const Color pinkAlternate = Color(0xffa53692);
 
-
+  static const Color transparent = Colors.transparent;
 
   static const Color lightBlue_1 = Color(0XFFdde6ff);
   static const Color lightBlue_2 = Color(0XFF2050d6);
