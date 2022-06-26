@@ -12,8 +12,7 @@ class HomeSliderDisplay extends StatelessWidget {
 
   List<HomeDisplayModel> homeDisplayImages = List.generate(
     2,
-        (index) =>
-        HomeDisplayModel(
+    (index) => HomeDisplayModel(
       text: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,8 +21,7 @@ class HomeSliderDisplay extends StatelessWidget {
           children: [
             Text(
               "PRODUCT DESIGNER",
-              style:
-              GoogleFonts.oswald(
+              style: GoogleFonts.oswald(
                 color: kPrimaryColor,
                 fontWeight: FontWeight.w900,
                 fontSize: 16.0,
@@ -126,12 +124,14 @@ class HomeSliderDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *
         (ScreenHelper.isMobile(context) ? .7 : .85);
-    return Container(width: double.infinity,color: Colors.white,
+    return Container(
+      width: double.infinity,
+      color: Colors.white,
       alignment: Alignment.center,
       child: CarouselSlider(
         carouselController: carouselController,
         options: CarouselOptions(
-           autoPlay: true,
+          autoPlay: true,
           viewportFraction: 1,
           scrollPhysics: NeverScrollableScrollPhysics(),
           //height: carouselContainerHeight,
@@ -144,17 +144,14 @@ class HomeSliderDisplay extends StatelessWidget {
                 // Responsive views
                 desktop: _buildDesktop(
                   context,
-
                   homeDisplayImages[index].image!,
                 ),
                 tablet: _buildTablet(
                   context,
-
                   homeDisplayImages[index].image!,
                 ),
                 mobile: _buildMobile(
                   context,
-
                   homeDisplayImages[index].image!,
                 ),
               );
@@ -167,14 +164,32 @@ class HomeSliderDisplay extends StatelessWidget {
 }
 
 // Big screens
-Widget _buildDesktop(BuildContext context,  Widget image) {
+Widget _buildDesktop(BuildContext context, Widget image) {
   return Center(
     child: ResponsiveWrapper(
       maxWidth: kDesktopMaxWidth,
       minWidth: kDesktopMaxWidth,
       defaultScale: false,
       child: Expanded(
-        child: image,
+        child: Stack(
+          children: [
+            image,
+            Positioned(
+              top: 30,
+              left: 20,
+              child: Container(
+                width: 350,
+                child: Text(
+                  'BE YOUR OWN KIND OF BEAUTIFUL',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 70,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     ),
   );

@@ -39,17 +39,7 @@ class TestimonialSection extends StatefulWidget {
 
 class _TrendingProductsSectionState extends State<TestimonialSection>
     with TickerProviderStateMixin {
-  // Create a controller
-  late final AnimationController animationController = AnimationController(
-    duration: const Duration(seconds: 10),
-    vsync: this,
-  )..repeat(reverse: false);
 
-// Create an animation with value of type "double"
-  late final Animation<double> animation = CurvedAnimation(
-    parent: animationController,
-    curve: Curves.linear,
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -74,32 +64,23 @@ class _TrendingProductsSectionState extends State<TestimonialSection>
         mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           SizedBox(height: 40),
-          Text(
-            'Shop the Latest',
-            style: dancingScriptRegular22,
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
+
           Text(
             'Client Reviews',
             style: TextStyle(
                 fontFamily: "DancingScript", color: Colors.black, fontSize: 36),
           ),
           SizedBox(height: 10),
-          RotationTransition(
-            turns: animation,
-            child: Image.asset(
-              'assets/images/logo.png',
-              height: 100,
-            ),
-          ),
+          // Image.asset(
+          //   'assets/images/logo.png',
+          //   height: 100,
+          // ),
           Container(
             // color: Colors.red,
             margin: EdgeInsets.only(top: 15),
             child: CarouselSlider(
               options: CarouselOptions(
-                height: 300,
+                height: 200,
                 // enlargeCenterPage: true,
                 autoPlay: true,
                 viewportFraction: 1,
