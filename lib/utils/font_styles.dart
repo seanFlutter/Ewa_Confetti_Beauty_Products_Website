@@ -4,6 +4,8 @@ import 'package:web_portfolio/utils/dimensions.dart';
 
 ///Karla
 final karlaRegular13 = TextStyle(fontFamily: "Karla", fontSize: 13);
+final karla13white =
+TextStyle(fontFamily: "Karla", fontSize: 13, color: Colors.white);
 final karla14 =
     TextStyle(fontFamily: "Karla", fontSize: Dimensions.fontSizeDefault);
 final karla14grey = TextStyle(

@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       key: Globals.scaffoldKey,
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -88,9 +88,9 @@ class Home extends StatelessWidget {
               AboutUsSection(),
               TransparentDivider(),
               NewArrivalsSection(),
-              TestimonialSection(),  BrandsSection(),
+              TestimonialSection(),
+              BrandsSection(),
               ContactUsSection(),
-
               Footer(),
             ],
           ),

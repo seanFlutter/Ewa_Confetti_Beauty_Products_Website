@@ -9,6 +9,7 @@ class Palette {
   static const Color pink = Color(0xffc01157);
   static const Color pinkAlternate = Color(0xffa53692);
 
+  static const Color purple = Color(0xffa53692);
   static const Color transparent = Colors.transparent;
 
   static const Color lightBlue_1 = Color(0XFFdde6ff);
@@ -35,7 +36,7 @@ class Palette {
   static const Color blackText_1 = Color(0xFF293246);
   static const Color black_4 = Color(0xFF222734);
 
-  static const Color purple_1 = Color(0xff0088c2);
+
   static const Color purple_2 = Color(0xff2152ff);
   static const Color pink_1 = Color(0xffff109f);
 

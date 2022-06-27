@@ -1,10 +1,13 @@
+import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/header_item.dart';
+import 'package:web_portfolio/utils/color_palette.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/utils/font_styles.dart';
 import 'package:web_portfolio/utils/globals.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
@@ -20,12 +23,16 @@ List<HeaderItem> headerItems = [
 class HeaderLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(padding: EdgeInsets.only(left: 40),
+    return Container(
+      padding: EdgeInsets.only(left: 40),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
           onTap: () {},
-          child: Image.asset('assets/images/logo.png',height: 70,),
+          child: Image.asset(
+            'assets/images/logo.png',
+            height: 70,
+          ),
         ),
       ),
     );
@@ -60,7 +67,6 @@ class HeaderRow extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 14.0,
-
                             ),
                           ),
                         ),
@@ -77,7 +83,6 @@ class HeaderRow extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 14.0,
-
                             ),
                           ),
                         ),
@@ -93,7 +98,8 @@ class HeaderRow extends StatelessWidget {
 class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.white,
+    return Container(
+      color: Colors.white,
       child: ScreenHelper(
         desktop: Padding(
           padding: EdgeInsets.symmetric(vertical: 8.0),
@@ -114,17 +120,39 @@ class Header extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            HeaderLogo(),
-            // Restart server to make icons work
-            // Lets make a scaffold key and create a drawer
             GestureDetector(
               onTap: () {
-                // Lets open drawer using global key
-                Globals.scaffoldKey.currentState!.openEndDrawer();
+                Globals.scaffoldKey.currentState!.openDrawer();
               },
-              child:
-              Icon(
-              Icons.description,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.menu,
+                  ),
+                  Text('MENU')
+                ],
+              ),
+            ),
+            HeaderLogo(),
+            Container(width:  200, color: Colors.green,
+              child: Row(
+                children: <Widget>[
+                  Stack(
+                    children: <Widget>[
+                      Positioned(left: 0, right: 5, bottom: 0, top: 4, child: Icon(FeatherIcons.shoppingCart)),
+                      Positioned(
+                        right: 0,
+                        top: 0,
+                        child: Container(width: 10,height: 10,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Palette.purple),
+                          child: Text('2', style: karla13white),
+                        ),
+                      )
+                    ],
+                  )
+                ],
               ),
             )
           ],
