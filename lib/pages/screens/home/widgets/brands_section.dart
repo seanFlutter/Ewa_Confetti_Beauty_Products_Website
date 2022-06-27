@@ -3,7 +3,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
-final List<String> sponsorsLogo = [
+final List<String> brandslogolist = [
   "assets/brand1.png",
   "assets/brand2.png",
   "assets/brand3.png",
@@ -11,7 +11,7 @@ final List<String> sponsorsLogo = [
   "assets/brand5.png",
 ];
 
-class Sponsors extends StatelessWidget {
+class BrandsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,7 +36,7 @@ Widget _buildUi(double width) {
           return Wrap(
             runSpacing: 50.0,
             spacing: 50.0,
-            children: sponsorsLogo
+            children: brandslogolist
                 .map(
                   (logo) => Container(
                     height: 20.0,

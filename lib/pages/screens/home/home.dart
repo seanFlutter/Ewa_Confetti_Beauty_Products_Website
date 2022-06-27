@@ -10,7 +10,7 @@ import 'package:web_portfolio/pages/screens/home/widgets/header.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/about_us_section.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/portfolio_stats.dart';
 import 'package:web_portfolio/pages/screens/home/widgets/contact_us_section.dart';
-import 'package:web_portfolio/pages/screens/home/widgets/sponsors.dart';
+import 'package:web_portfolio/pages/screens/home/widgets/brands_section.dart';
 
 import 'package:web_portfolio/pages/screens/home/widgets/new_arrivals_section.dart';
 import 'package:web_portfolio/utils/constants.dart';
@@ -88,9 +88,9 @@ class Home extends StatelessWidget {
               AboutUsSection(),
               TransparentDivider(),
               NewArrivalsSection(),
-              TestimonialSection(),
+              TestimonialSection(),  BrandsSection(),
               ContactUsSection(),
-              Sponsors(),
+
               Footer(),
             ],
           ),
