@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/skill.dart';
+import 'package:web_portfolio/data/models/skill.dart';
+
 import 'package:web_portfolio/utils/color_palette.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/font_styles.dart';

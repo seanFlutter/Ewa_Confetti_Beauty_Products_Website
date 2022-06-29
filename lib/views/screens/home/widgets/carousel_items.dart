@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:web_portfolio/models/home_display_model.dart';
+import 'package:web_portfolio/data/models/home_display_model.dart';
 import 'package:web_portfolio/utils/constants.dart';
 
 List<HomeDisplayModel> carouselItems = List.generate(
@@ -12,7 +12,7 @@ List<HomeDisplayModel> carouselItems = List.generate(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
-        children: [
+        children: <Widget>[
           Text(
             "PRODUCT DESIGNER",
             style: GoogleFonts.oswald(
@@ -109,7 +109,7 @@ List<HomeDisplayModel> carouselItems = List.generate(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
       child: Image.asset(
         "assets/images/product${index + 1}.png",
-         fit: BoxFit.cover,
+        fit: BoxFit.cover,
       ),
     ),
   ),

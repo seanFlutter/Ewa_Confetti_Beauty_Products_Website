@@ -4,7 +4,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/header_item.dart';
+import 'package:web_portfolio/data/models/header_item.dart';
 import 'package:web_portfolio/utils/color_palette.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/font_styles.dart';
@@ -119,39 +119,59 @@ class Header extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
+          children: <Widget>[
             GestureDetector(
               onTap: () {
                 Globals.scaffoldKey.currentState!.openDrawer();
               },
               child: Row(
-                children: [
+                children: <Widget>[
                   Icon(
                     Icons.menu,
                   ),
-                  Text('MENU')
+                  Text('  MENU')
                 ],
               ),
             ),
             HeaderLogo(),
-            Container(width:  200, color: Colors.green,
+            Container(
+              width: 65,
+              height: 30,
+              color: Colors.green,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Stack(
-                    children: <Widget>[
-                      Positioned(left: 0, right: 5, bottom: 0, top: 4, child: Icon(FeatherIcons.shoppingCart)),
-                      Positioned(
-                        right: 0,
-                        top: 0,
-                        child: Container(width: 10,height: 10,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Palette.purple),
-                          child: Text('2', style: karla13white),
+                  Expanded(
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned(
+                          //  left: 0,
+                          right: 5,
+
+                          top: 4,
+                          child: Icon(
+                            FeatherIcons.shoppingCart,
+                          ),
                         ),
-                      )
-                    ],
-                  )
+                        Positioned(
+                          right: 0,
+                          top: 0,
+                          child: Container(
+                            width: 16,
+                            height: 16,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Palette.purple),
+                            child: Text('2',
+                                style: karla13white.copyWith(fontSize: 10)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Expanded(child: Icon(FeatherIcons.user))
                 ],
               ),
             )

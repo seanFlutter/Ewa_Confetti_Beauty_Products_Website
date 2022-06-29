@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_portfolio/models/product_model.dart';
+import 'package:web_portfolio/data/models/product_model.dart';
 import 'package:web_portfolio/utils/color_palette.dart';
 import 'package:web_portfolio/utils/font_styles.dart';
 

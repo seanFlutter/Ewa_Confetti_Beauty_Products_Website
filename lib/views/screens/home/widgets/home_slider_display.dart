@@ -2,8 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/home_display_model.dart';
-import 'package:web_portfolio/pages/screens/home/widgets/carousel_items.dart';
+import 'package:web_portfolio/data/models/home_display_model.dart';
+import 'package:web_portfolio/views/screens/home/widgets/carousel_items.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
