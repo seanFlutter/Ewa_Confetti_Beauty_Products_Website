@@ -33,6 +33,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   feather_icons: ^1.2.0
   get: ^4.6.5
+  connectivity: ^3.0.6
+  url_launcher: ^6.1.4
 
 
 dev_dependencies:
