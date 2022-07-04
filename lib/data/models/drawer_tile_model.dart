@@ -4,5 +4,5 @@ class DrawerTileModel {
   final String? title;
   final IconData? iconData;
   final VoidCallback? onPressed;
-  DrawerTileModel({ this.iconData, this.title, this.onPressed});
+  DrawerTileModel({this.iconData, this.title, this.onPressed});
 }
