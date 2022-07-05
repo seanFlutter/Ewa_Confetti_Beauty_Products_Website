@@ -133,7 +133,7 @@ class HomeSliderDisplay extends StatelessWidget {
         options: CarouselOptions(
           autoPlay: true,
           viewportFraction: 1,
-          scrollPhysics: NeverScrollableScrollPhysics(),
+          scrollPhysics: NeverScrollableScrollPhysics(),aspectRatio: 2
           //height: carouselContainerHeight,
         ),
         items: List.generate(
@@ -172,7 +172,7 @@ Widget _buildDesktop(BuildContext context, Widget image) {
       defaultScale: false,
       child: Expanded(
         child: Stack(
-          children: [
+          children: <Widget>[
             image,
             Positioned(
               top: 30,
@@ -180,7 +180,7 @@ Widget _buildDesktop(BuildContext context, Widget image) {
               child: Container(
                 width: 350,
                 child: Text(
-                  'BE YOUR OWN KIND OF BEAUTIFUL',
+                  'DEFINE BEAUTY.',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 70,
