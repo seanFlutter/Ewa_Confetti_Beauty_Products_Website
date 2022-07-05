@@ -27,7 +27,7 @@ class DrawerTile extends StatelessWidget {
           ),
         ),
         height: 60,
-        width: double.infinity,
+        // width: double.infinity,
         padding: EdgeInsets.symmetric(
           horizontal: Dimensions.PADDING_SIZE_SMALL,
         ),
@@ -37,7 +37,7 @@ class DrawerTile extends StatelessWidget {
             SizedBox(width: 15),
             Text(
               drawerHeaderItem!.title!,
-              style: karlaRegular13,
+              style: karlaRegular13.copyWith(color: Palette.white),
             ),
           ],
         ),

@@ -11,10 +11,10 @@ class GlobalDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PointerInterceptor(
-      child: Container(
+      child: Container(width: 350,
         decoration: BoxDecoration(
-         // color: Theme.of(context).hintColor.withOpacity(0.2),
-          color: Colors.red,
+          color: Theme.of(context).hintColor.withOpacity(0.7),
+        //  color: Colors.red,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,

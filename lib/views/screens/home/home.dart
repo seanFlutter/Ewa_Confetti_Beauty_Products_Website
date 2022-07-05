@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:web_portfolio/views/screens/global_drawer/global_drawer.dart';
 import 'package:web_portfolio/views/screens/home/widgets/divider_section.dart';
 import 'package:web_portfolio/views/screens/home/widgets/home_slider_display.dart';
 import 'package:web_portfolio/views/screens/home/widgets/trending_section.dart';
@@ -24,55 +25,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       key: Globals.scaffoldKey,
-      drawer: Drawer(
-        child: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 24.0,
-            ),
-            child: ListView.separated(
-              itemBuilder: (BuildContext context, int index) {
-                return drawerHeaderItems[index].isButton
-                    ? MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: kDangerColor,
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          padding: EdgeInsets.symmetric(horizontal: 28.0),
-                          child: TextButton(
-                            onPressed: drawerHeaderItems[index].onTap,
-                            child: Text(
-                              drawerHeaderItems[index].title!,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14.0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
-                    : ListTile(
-                        title: Text(
-                          drawerHeaderItems[index].title!,
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                        ),
-                      );
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(
-                  height: 10.0,
-                );
-              },
-              itemCount: drawerHeaderItems.length,
-            ),
-          ),
-        ),
-      ),
+      drawer: GlobalDrawer(),
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
