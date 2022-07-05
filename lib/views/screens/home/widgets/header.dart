@@ -4,20 +4,21 @@ import 'package:flutter/rendering.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/data/models/header_item.dart';
+import 'package:web_portfolio/data/models/drawer_header_item.dart';
 import 'package:web_portfolio/utils/color_palette.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/font_styles.dart';
 import 'package:web_portfolio/utils/globals.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
-List<HeaderItem> headerItems = [
-  HeaderItem(title: "ABOUT US", onTap: () {}),
-  HeaderItem(title: "SHOP BY BRAND", onTap: () {}),
-  HeaderItem(title: "MAKE UP", onTap: () {}),
-  HeaderItem(title: "SKIN CARE", onTap: () {}),
-  HeaderItem(title: "WELLNESS", onTap: () {}),
-  HeaderItem(title: "FRAGRANCE", onTap: () {}),
+List<DrawerHeaderItem> drawerHeaderItems = [
+  DrawerHeaderItem(title: "ABOUT US", onTap: () {}),
+  DrawerHeaderItem(title: "FRAGRANCE", onTap: (){}),
+  DrawerHeaderItem(title: "SKIN CARE", onTap: () {}),
+  DrawerHeaderItem(title: "EYE LASH SERVICE", onTap: () {}),
+  DrawerHeaderItem(title: "WISHLIST", onTap: () {}),
+  DrawerHeaderItem(title: "LOGIN/REGISTER", onTap: () {}),
+
 ];
 
 class HeaderLogo extends StatelessWidget {
@@ -48,7 +49,7 @@ class HeaderRow extends StatelessWidget {
         Condition.largerThan(name: MOBILE),
       ],
       child: Row(
-        children: headerItems
+        children: drawerHeaderItems
             .map(
               (item) => item.isButton
                   ? MouseRegion(

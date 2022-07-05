@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
             ),
             child: ListView.separated(
               itemBuilder: (BuildContext context, int index) {
-                return headerItems[index].isButton
+                return drawerHeaderItems[index].isButton
                     ? MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: Container(
@@ -43,11 +43,11 @@ class Home extends StatelessWidget {
                           ),
                           padding: EdgeInsets.symmetric(horizontal: 28.0),
                           child: TextButton(
-                            onPressed: headerItems[index].onTap,
+                            onPressed: drawerHeaderItems[index].onTap,
                             child: Text(
-                              headerItems[index].title!,
+                              drawerHeaderItems[index].title!,
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 14.0,
                               ),
                             ),
@@ -56,9 +56,9 @@ class Home extends StatelessWidget {
                       )
                     : ListTile(
                         title: Text(
-                          headerItems[index].title!,
+                          drawerHeaderItems[index].title!,
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                       );
@@ -68,7 +68,7 @@ class Home extends StatelessWidget {
                   height: 10.0,
                 );
               },
-              itemCount: headerItems.length,
+              itemCount: drawerHeaderItems.length,
             ),
           ),
         ),

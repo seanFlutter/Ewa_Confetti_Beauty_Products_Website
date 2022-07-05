@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class HeaderItem {
+class DrawerHeaderItem {
   final String? title;
   final VoidCallback? onTap;
   final bool isButton;
+  final IconData? iconData;
 
-  HeaderItem({
+  DrawerHeaderItem({
     this.title,
     this.onTap,
-    this.isButton = false,
+    this.isButton = false,this.iconData
   });
 }
